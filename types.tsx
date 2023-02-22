@@ -18,3 +18,15 @@ export type Comment = {
 };
 
 export type Topic = { slug: string; description: string };
+
+export type PatchCommentVotes = (
+  vote: number,
+  articleId: number,
+  commentId: number
+) => Promise<Response>;
+
+export type PatchArticleVotes = (
+  vote: number,
+  articleId: number,
+  commentId: number
+) => Promise<Response>;

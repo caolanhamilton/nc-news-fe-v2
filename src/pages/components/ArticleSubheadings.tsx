@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Article } from "../../../types";
+import type { Article, PatchArticleVotes } from "../../../types";
 import { patchArticleVotes } from "../../apiCalls/updateArticleVotes";
 import UpVoteButton from "./UpVoteButton";
 import DownVoteBtn from "./DownVoteButton";
@@ -24,14 +24,14 @@ export default function ArticleSubheadings({ article }: Props) {
             setLikeChanges={setLikeChanges}
             likeChanges={likeChanges}
             ids={{ articleId: article.article_id, commentId: -1 }}
-            patchVoteFunc={patchArticleVotes}
+            patchVoteFunc={patchArticleVotes as PatchArticleVotes}
           ></DownVoteBtn>
           <p className="text-white">{article.votes + likeChanges}</p>
           <UpVoteButton
             setLikeChanges={setLikeChanges}
             likeChanges={likeChanges}
-            ids={{ articleId: article.article_id, commentId: -1}}
-            patchVoteFunc={patchArticleVotes}
+            ids={{ articleId: article.article_id, commentId: -1 }}
+            patchVoteFunc={patchArticleVotes as PatchArticleVotes}
           ></UpVoteButton>
         </div>
       </div>
