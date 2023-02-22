@@ -10,5 +10,5 @@ export function patchCommentVotes(vote: number, articleId: number, commentId: nu
         inc_votes: vote,
       }),
     }
-  ).then((res) => console.log(res.json()));
+  );
 }
