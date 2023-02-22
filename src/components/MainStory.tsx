@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Article } from "../../../types";
+import type { Article } from "../../types";
 
 type Props = {
-    mainStory: Article | undefined;
+  mainStory: Article | undefined;
 };
 
-export default function MainStory({mainStory}: Props) {
+export default function MainStory({ mainStory }: Props) {
   return (
     <Link
       href={`/articles/${mainStory ? mainStory.article_id : ""}`}

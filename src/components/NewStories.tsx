@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Article } from "../../../types";
+import type { Article } from "../../types";
 
 type Props = {
   newStories: Article[];

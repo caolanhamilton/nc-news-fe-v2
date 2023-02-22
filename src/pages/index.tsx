@@ -1,10 +1,10 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import TopStories from "./components/TopStories";
+import TopStories from "../components/TopStories";
 import type { GetStaticProps } from "next";
-import MainSection from "./components/MainSection";
+import MainSection from "../components/MainSection";
 import type { Article } from "../../types";
-import HeaderNav from "./components/HeaderNav";
+import HeaderNav from "../components/HeaderNav";
 import { sortByDate } from "../utills/sortByDate";
 
 type Props = {
@@ -46,7 +46,9 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       articles,
     },
+    revalidate: 10,
   };
+
 };
 
 export default Home;

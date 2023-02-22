@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import type { Article } from "../../../types";
+import type { Article } from "../../types";
 import Link from "next/link";
 
 type Props = {
@@ -20,7 +20,6 @@ export default function TopStories({ topStories }: Props) {
             className="flex space-x-4 md:w-1/3 md:space-x-8"
             key={story.article_id}
           >
-         
             <Image
               src={"/image-retro-pcs.jpg"}
               height={200}

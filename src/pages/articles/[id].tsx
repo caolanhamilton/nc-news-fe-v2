@@ -3,10 +3,10 @@ import type { Comment } from "../../../types";
 import { Article } from "../../../types";
 import type { GetServerSideProps } from "next";
 import { type NextPage } from "next";
-import HeaderNav from "../components/HeaderNav";
-import CommentsListContainer from "../components/CommentsListContainer";
-import ArticleMainContent from "../components/ArticleMainContent";
-import ArticleSubheadings from "../components/ArticleSubheadings";
+import HeaderNav from "../../components/HeaderNav";
+import CommentsListContainer from "../../components/CommentsListContainer";
+import ArticleMainContent from "../../components/ArticleMainContent";
+import ArticleSubheadings from "../../components/ArticleSubheadings";
 import { sortByDate } from "../../utills/sortByDate";
 
 type Props = {
@@ -19,7 +19,7 @@ const Article: NextPage<Props> = ({ article, comments }) => {
   return (
     <div className="mx-4 md:mx-20 lg:mx-40">
       <HeaderNav />
-      <div className="flex flex-col items-center justify-center mb-20">
+      <div className="mb-20 flex flex-col items-center justify-center">
         <div className="flex-col items-center justify-center space-y-10 md:w-2/3">
           <h1 className="text-4xl font-extrabold  md:text-5xl">
             {article.title}
@@ -61,4 +61,3 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   };
 };
-

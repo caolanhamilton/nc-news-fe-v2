@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import type { Comment } from "../../../types";
-import { postComment } from "../../apiCalls/postComment";
+import type { Comment } from "../../types";
+import { postComment } from "../apiCalls/postComment";
 
 type Props = {
   articleId: number;

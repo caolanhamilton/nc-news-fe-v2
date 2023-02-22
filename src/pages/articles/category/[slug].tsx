@@ -1,7 +1,7 @@
-import { GetServerSideProps } from "next";
+import type { GetServerSideProps } from "next";
 import type { NextPage } from "next";
-import type { Article, Topic } from "../../../../types";
-import HeaderNav from "../../components/HeaderNav";
+import type { Article } from "../../../../types";
+import HeaderNav from "../../../components/HeaderNav";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -100,4 +100,3 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   };
 };
-

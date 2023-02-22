@@ -1,14 +1,14 @@
-import {useState} from "react";
+import { useState } from "react";
 import DownVoteBtn from "./DownVoteButton";
 import UpVoteButton from "./UpVoteButton";
-import type { Article, PatchArticleVotes } from "../../../types";
-import { patchArticleVotes } from "../../apiCalls/updateArticleVotes";
+import type { Article, PatchArticleVotes } from "../../types";
+import { patchArticleVotes } from "../apiCalls/updateArticleVotes";
 
 type Props = {
-    article: Article;
+  article: Article;
 };
 
-export default function ArticleVoter({article}: Props) {
+export default function ArticleVoter({ article }: Props) {
   const [likeChanges, setLikeChanges] = useState(0);
 
   return (

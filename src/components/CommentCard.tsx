@@ -1,9 +1,9 @@
 import React from "react";
-import type { Comment } from "../../../types";
+import type { Comment } from "../../types";
 import Image from "next/image";
 import CommentVoter from "./CommentVoter";
-import { sortByDate } from "../../utills/sortByDate";
-import { deleteComment } from "../../apiCalls/deleteComment";
+import { sortByDate } from "../utills/sortByDate";
+import { deleteComment } from "../apiCalls/deleteComment";
 
 type Props = {
   comment: Comment;

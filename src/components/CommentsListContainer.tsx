@@ -1,5 +1,5 @@
 import React from "react";
-import type { Comment } from "../../../types";
+import type { Comment } from "../../types";
 import CommentCard from "./CommentCard";
 import CommentForm from "./CommentForm";
 import { useState } from "react";

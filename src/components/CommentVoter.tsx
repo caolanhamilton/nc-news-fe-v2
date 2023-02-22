@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import type { Comment, PatchCommentVotes } from "../../../types";
-import { patchCommentVotes } from "../../apiCalls/updateCommentVotes";
+import type { Comment, PatchCommentVotes } from "../../types";
+import { patchCommentVotes } from "../apiCalls/updateCommentVotes";
 import UpVoteButton from "./UpVoteButton";
 import DownVoteBtn from "./DownVoteButton";
-
 
 type Props = {
   comment: Comment;
@@ -18,18 +17,14 @@ export default function CommentVoter({ comment, articleId }: Props) {
         setLikeChanges={setLikeChanges}
         ids={{ commentId: comment.comment_id, articleId: articleId }}
         likeChanges={likeChanges}
-        patchVoteFunc={
-          patchCommentVotes as PatchCommentVotes
-        }
+        patchVoteFunc={patchCommentVotes as PatchCommentVotes}
       ></UpVoteButton>
       <p>{comment.votes + likeChanges}</p>
       <DownVoteBtn
         setLikeChanges={setLikeChanges}
         ids={{ commentId: comment.comment_id, articleId: articleId }}
         likeChanges={likeChanges}
-        patchVoteFunc={
-          patchCommentVotes as PatchCommentVotes
-        }
+        patchVoteFunc={patchCommentVotes as PatchCommentVotes}
       ></DownVoteBtn>
     </div>
   );
