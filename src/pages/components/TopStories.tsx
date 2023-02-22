@@ -8,7 +8,6 @@ type Props = {
 };
 
 export default function TopStories({ topStories }: Props) {
-  console.log(topStories);
   return (
     <>
       <h3 className="text-6xl font-bold italic text-orange-400">
