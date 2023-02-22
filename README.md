@@ -1,28 +1,19 @@
-# Create T3 App
+What is Northcoders News?
+Northcoders News v2 is a mobile-first web application which recreates the front-end of a project made at my time at Northcoders with TypeScript Next.js, React, Tailwind CSS. It is designed to be the front-end of a news app with similar functionality to Reddit.com. The app consumes my Northrcoders News API to fetch its data.
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+The home page of the app presents users with a preview of all articles which can be filtered by topic using the nav bar . Clicking on an article preview brings the user to an article page, where the full article text is displayed. The user can like or dislike the article they are reading and also create, view and delete comments.
 
-## What's next? How do I make an app with this?
+The App makes use of:
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Rendering stratgeies: Server Side Rending & Incremental Static Regeneration
+Next.js directory routing
+Fetch API
+Responsive CSS and mobile first design using Tailwind CSS
+Optimistic rendering
+Conditional rendering
+Live version!
+You can find a live version of Northcoders News hosted on Vercel by clicking here:
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+https://nc-news-fe-v2-q428tvd22-caolanhamilton.vercel.app/
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+You can view the app using any modern mobile or desktop browser such as Chrome or Safari.
