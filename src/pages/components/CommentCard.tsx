@@ -1,5 +1,5 @@
 import React from "react";
-import { Comment } from "../../../types";
+import type { Comment } from "../../../types";
 import Image from "next/image";
 import CommentVoter from "./CommentVoter";
 import { sortByDate } from "../../utills/sortByDate";

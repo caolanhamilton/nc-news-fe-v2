@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Comment } from "../../../types";
+import type { Comment } from "../../../types";
 import { postComment } from "../../apiCalls/postComment";
 
 type Props = {

@@ -5,6 +5,7 @@ import type { GetStaticProps } from "next";
 import MainSection from "./components/MainSection";
 import type { Article } from "../../types";
 import HeaderNav from "./components/HeaderNav";
+import { sortByDate } from "../utills/sortByDate";
 
 type Props = {
   articles: Article[];
@@ -22,11 +23,9 @@ const Home: NextPage<Props> = ({ articles }) => {
       <main>
         <MainSection
           mainStory={articles[0]}
-          newStories={articles
-            .sort((a, b) => +a.created_at - +b.created_at)
-            .slice(0, 3)}
+          newStories={sortByDate(articles)
+            .slice(0, 3) as Article[]}
         ></MainSection>
-
         <TopStories
           topStories={[...articles]
             .sort((a, b) => b.votes - a.votes)
